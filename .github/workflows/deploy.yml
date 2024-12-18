@@ -37,5 +37,5 @@ jobs:
     steps:
       - name: Output information
         run: |        
-          echo "MANGODB_DB_NAME: ${{ env.MANGO_USER }}"
+          echo "MANGODB_NAME: ${{ env.MANGODB_USERNAME }}"
           echo "MANGO_DB_NAME: ${{ env.MONGODB_DB_NAME }}"
