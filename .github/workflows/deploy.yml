@@ -29,13 +29,13 @@ jobs:
         run: npm start & npx wait-on http://127.0.0.1:$PORT
       - name: Run tests
         run: npm test
-      # - name: Output information
-      #   run: echo " MANGODB_USERNAME: ${{ env.MONGODB_USERNAME }} "
+      - name: Output information
+        run: echo "MANGODB_USERNAME:${{ env.MONGODB_USERNAME }}"
   deploy:
     needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Output information
         run: |        
-          echo "MANGODB_NAME: ${{ env.MANGODB_USERNAME }}"
-          echo "MANGO_DB_NAME: ${{ env.MONGODB_DB_NAME }}"
+          echo " MANGODB_NAME: ${{ env.MANGODB_USERNAME }}"
+          echo " MANGO_DB_NAME: ${{ env.MONGODB_DB_NAME }}"
